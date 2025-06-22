@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Sacha the Deer",
+    "description": "Sacha’s elegant antlers have never been seen on such a beautiful t-shirt. Wear this majestic beast and feel all your problems float away.",
+    "price": "$9.00"
+  },
+  {
+    "name": "Bumble the Elephant",
+    "description": "Bumble the humble elephant is your shining star. He will always remember who you are and why you are here.",
+    "price": "$9.00"
+  },
+  {
+    "name": "Gerald the Giraffe",
+    "description": "Gerald the giraffe isn’t particularly spiritual but he has a long neck which can help you in a pinch.",
+    "price": "$9.00"
+  },
+  {
+    "name": "Todd the Hedgehog",
+    "description": "Todd the hedgehog may have a spiky exterior but his heart is made of gold. Unfortunately this weighs him down and makes it difficult for him to get around.",
+    "price": "$9.00"
+  },
+  {
+    "name": "Scar the Lion",
+    "description": "Scar the lion is always true to himself. The Mufasa tragedy was a slight blemish in what was otherwise a saint-like life. ",
+    "price": "$9.00"
+  },
+  {
+    "name": "Gavin the Tiger",
+    "description": "Gavin the tiger was brought up vegan. His favorite meal is chickpea salad with a lemon juice dressing.",
+    "price": "$9.00"
+  }
+]
