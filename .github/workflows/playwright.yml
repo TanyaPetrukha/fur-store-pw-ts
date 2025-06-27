@@ -18,6 +18,9 @@ jobs:
 
     env:
       URL_DEV: ${{ vars.URL_DEV }}
+      CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
+      CVV: ${{ secrets.CVV }}
+      MM_YY: ${{ secrets.MM_YY }}
 
     steps:
     - uses: actions/checkout@v4
