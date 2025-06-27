@@ -1,20 +1,21 @@
 import { Locator, Page } from "@playwright/test";
 
 import { BasePage } from "./BasePage";
-import { ShirtComponent } from "app/components/ShirtComponent";
-import { NavigationComponent } from "app/components/NavigationComponent";
+import { ProductComponent } from "app/components/ProductComponent";
+import { CartComponent } from "app/components/CartComponent";
 
 
 export class ProductsPage extends BasePage {
     readonly locators: ProductsPageLocators;
-    readonly shirtComponent: ShirtComponent;
-    readonly navigationComponent: NavigationComponent;
+    readonly product: ProductComponent;
+    readonly cart: CartComponent;
+    
 
     constructor(page: Page) {
         super(page);
         this.locators = new ProductsPageLocators(page);
-        this.shirtComponent= new ShirtComponent(page);
-        this.navigationComponent = new NavigationComponent(page);
+        this.product = new ProductComponent(page);
+        this.cart = new CartComponent(page);
     }
 }
 

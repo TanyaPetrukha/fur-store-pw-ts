@@ -1,15 +1,11 @@
 import {Page, Locator} from "@playwright/test";
-
 import { BasePage } from "./BasePage";
-import { NavigationComponent } from "app/components/NavigationComponent";
 
 export class ContactPage extends BasePage{
-    readonly navigationComponent: NavigationComponent;
     readonly locators: ContactPageLocators;
 
     constructor(page: Page){
         super(page);
-        this.navigationComponent = new NavigationComponent(page);
         this.locators = new ContactPageLocators(page);
     }
 }

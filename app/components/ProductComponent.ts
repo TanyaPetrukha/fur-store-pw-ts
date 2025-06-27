@@ -1,12 +1,12 @@
-import { Page, Locator } from "@playwright/test";
+import { Page} from "@playwright/test";
 import { step } from "support/stepReporter";
 
-export class ShirtComponent {
-    page: Page;
+export class ProductComponent {
+    readonly page: Page;
     
     constructor (page: Page){
         this.page = page;
-    }
+    }   
 
     @step("Getting the product's price on the product list page")
     async getPriceOnProductListPage(shirtName: string) {
@@ -36,4 +36,9 @@ export class ShirtComponent {
         return (await productDescription.textContent()).trim(); 
     }
 
+    @step("User opens the product card page")
+    async openProductCardPage(shirtName: string){
+        await this.page.getByRole("link", {name: shirtName}).click();
+        await this.page.locator(".hero").getByRole("heading", {name: shirtName}).waitFor();
+    }
 }
