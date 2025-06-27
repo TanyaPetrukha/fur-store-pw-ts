@@ -13,7 +13,7 @@ test.describe("Verify description for products on the product list page", () => 
   for (const { name, description } of productDescriptions) {
     test(`Verify description of ${name} T-shirt`, async ({ pages }) => {
       const currentProductDescription =
-      await pages.productsPage.shirtComponent.getDescriptionOnProductListPage(name);
+      await pages.productsPage.product.getDescriptionOnProductListPage(name);
       const expectedStart = description.slice(0, 40);
       expect(currentProductDescription).toContain(expectedStart);
     });
@@ -25,7 +25,7 @@ test.describe("Verify description for the product on the product card page", () 
   for (const { name, description } of productDescriptions) {
     test(`Verify description of ${name} T-shirt`, async ({ pages }) => {
       const currentProductDescription =
-      await pages.productsPage.shirtComponent.getDescriptionOnProductCard(name);
+      await pages.productsPage.product.getDescriptionOnProductCard(name);
       expect(currentProductDescription).toEqual(description)
     });
   }

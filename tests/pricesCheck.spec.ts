@@ -12,7 +12,7 @@ test.describe("Verify prices for products on the product list page", () => {
   for (const { name, price } of productPrices) {
     test(`Verify price of ${name} T-shirt`, async ({ pages }) => {
       const currentProductPrice =
-        await pages.productsPage.shirtComponent.getPriceOnProductListPage(name);
+        await pages.productsPage.product.getPriceOnProductListPage(name);
       if (currentProductPrice !== price) {
         throw new Error(
           `Price mismatch for the "${name}" t-shirt. Expected price -  ${price}, but got - ${currentProductPrice}.`
@@ -32,7 +32,7 @@ test.describe("Verify price for the product on the product card page", () => {
   for (const { name, price } of productPrices) {
     test(`Verify price of ${name} T-shirt`, async ({ pages }) => {
       const currentProductPrice =
-        await pages.productsPage.shirtComponent.getPriceOnProductCard(name);
+        await pages.productsPage.product.getPriceOnProductCard(name);
       if (currentProductPrice !== price) {
         throw new Error(
           `Price mismatch for the "${name}" t-shirt. Expected price -  ${price}, but got - ${currentProductPrice}.`
